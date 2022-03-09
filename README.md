@@ -114,8 +114,7 @@ will most likely still take you offline.
 ### On Debian
 
 1. Download libapache2-mod-evasive.deb (found in the dist folder)
-2. `dpkg -i libapache2-mod-evasive.deb`
-3. Restart Apache
+2. `dpkg -i libapache2-mod-evasive.deb`3. Restart Apache
 
 ### On Windows
 
@@ -131,7 +130,7 @@ As always, any bugs may also be filed through Github and I'll see what I can do.
 
 1. Extract this archive
 2. `mv mod_evasive24.c mod_evasive.c`
-3. Run `$APACHE_ROOT/bin/apxs -i -a -c mod_evasive.c`
+3. Run `$APACHE_ROOT/bin/apxs -i -a -c -l pcre2-8 mod_evasive.c`
 4. The module will be built and installed into $APACHE_ROOT/modules, and loaded into your httpd.conf
 5. Restart Apache
 
